@@ -1,16 +1,21 @@
-# This is a sample Python script.
+def guess_number_loop():
+   odd_sum = 0
+   even_sum = 0
+   guessed_numbers = []
+   for _ in range(2):
+       guess = int(input("Guess a number:"))
+       guessed_numbers.append(guess)
+       if guess % 2 == 0:
+           print(f"{guess} is an even number.")
+           even_sum+=guess
+       else:
+           print(f"{guess} is an odd number.")
+           odd_sum += guess
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+   print("Sum of odd numbers:", odd_sum)
+   print("Sum of even numbers:", even_sum)
+   print("Subtraction of odd and even numbers:", odd_sum - even_sum)
+   print("Max value:", max(guessed_numbers))
+   print("Min value:", min(guessed_numbers))
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi uu, o1 {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+guess_number_loop()
